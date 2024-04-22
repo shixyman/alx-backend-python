@@ -2,8 +2,9 @@
 """Contains a method that measure the total execution time of
 a function"""
 from time import perf_counter
-import asyncio, time
+import asyncio
 wait_n = __import__('1-concurrent_coroutines').wait_n
+
 
 def measure_time(n: int, max_delay: int) -> float:
     """Measure the total execution time of a function
