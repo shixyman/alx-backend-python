@@ -3,9 +3,19 @@
     called async_comprehension that takes no arguments.
     The coroutine will collect 10 random numbers using an async comprehensing
     over async_generator, then return the 10 random numbers. """
-from previous_file import async_generator
+from typing import List
+from importlib import import_module as using
 
 
-async def async_comprehension():
-    random_numbers = [number async for number in async_generator()]
-    return random_numbers
+async_generator = using('0-async_generator').async_generator
+
+
+async def async_comprehension() -> List[float]:
+    """
+    async_comprehension- function to return 10 random numbers
+    Arguments:
+        no arguments
+    Returns:
+        10 random numbers
+    """
+    return [num async for num in async_generator()]
