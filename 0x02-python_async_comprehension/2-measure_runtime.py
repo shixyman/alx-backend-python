@@ -6,7 +6,8 @@
     Notice that the total runtime is roughly 10 seconds,
     explain it to yourself. """
 import asyncio
-from file_with_async_comprehension import async_comprehension
+import time
+async_comprehension = __import__('1-async_comprehension').async_comprehension
 
 
 async def measure_runtime():
