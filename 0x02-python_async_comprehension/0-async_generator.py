@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Contains a method that spawns Tasks n times with a
 specified delay between each call."""
+import random
+import asyncio
+from typing import Generator
 
 
 async def async_generator() -> Generator[float, None, None]:
